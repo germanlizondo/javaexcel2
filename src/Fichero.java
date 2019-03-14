@@ -121,9 +121,9 @@ public class Fichero {
         this.escribirClases();
     }
 
-    public Clase findClase(String numdia,String horari,ArrayList<Clase> clases) {
+    public Clase findClase(String nom,String numdia,String horari,ArrayList<Clase> clases) {
         for(Clase c : clases) {
-            if(c.getHorari().equals(horari) && c.getDia().getNum() == Integer.parseInt(numdia)) {
+            if(c.getHorari().equals(horari)) {
                 return c;
             }
         }

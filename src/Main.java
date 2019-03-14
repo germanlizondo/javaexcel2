@@ -27,6 +27,7 @@ public class Main {
 
                 String numdia = splited[1];
                 String hora = splited[2];
+                String nom  = splited[3];
 
                 switch (Integer.parseInt(numdia)){
                     case 0: dia = fichero.getDilluns(); break;
@@ -41,8 +42,6 @@ public class Main {
 
 
                 if(accio.equals("add")){
-                    String nom  =splited[3];
-
 
                     Clase clase = new Clase(hora,dia,nom);
 
@@ -50,8 +49,8 @@ public class Main {
                     fichero.setClases(clases);
 
                 }else if(accio.equals("del")){
-                    System.out.println(fichero.findClase(numdia,hora,clases).toString());
-                    clases.remove(fichero.findClase(numdia,hora,clases));
+                    System.out.println(fichero.findClase(nom,numdia,hora,clases));
+                    clases.remove(fichero.findClase(nom,numdia,hora,clases));
                     fichero.setClases(clases);
                 }
 
